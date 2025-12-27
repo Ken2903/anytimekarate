@@ -282,6 +282,67 @@ section { padding: 100px 0; }
     .event-row { flex-direction: column !important; }
 }
 
+/* --- MOBILE (narrow phones) --- */
+@media (max-width: 600px) {
+    /* Header: reduce padding and size */
+    header {
+        padding: 12px 18px;
+    }
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    /* Navigation: stack items and increase tap target */
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav a {
+        font-size: 1rem;
+        padding: 6px 0;
+        display: block;
+    }
+
+    /* Hero: make shorter and allow content to breathe */
+    .hero {
+        height: auto;
+        padding: 40px 0 60px;
+        align-items: flex-start;
+    }
+    .hero-bg img { display: none; } /* optionally hide large background on phones to save bandwidth */
+    .hero-main-text {
+        max-width: 92%;
+        margin-right: 0;
+        border-radius: 6px;
+    }
+    .hero-main-text img {
+        height: 200px;
+        object-position: center;
+    }
+
+    /* Titles and typography */
+    .jp-en-title h2 { font-size: 1.6rem; }
+    .jp-en-title span { font-size: 0.85rem; }
+
+    /* Page container padding */
+    .container { padding: 0 12px; }
+
+    /* Topics & lesson spacing */
+    .topic-item { flex-direction: column; align-items: flex-start; }
+    .lesson-card { padding: 16px; }
+
+    /* Featured lesson adjustments */
+    .lesson-feat-content { padding: 20px; }
+    .lesson-feat-img { min-height: 200px; }
+
+    /* Events: ensure stacked rows look tight */
+    .event-img { min-height: 180px; height: 180px; }
+    .event-txt { padding: 20px; }
+
+    /* Footer smaller */
+    footer { padding: 36px 0; font-size: 0.9rem; }
+}
+
 /* --- EVENTS --- */
 .event-row {
     display: flex;
